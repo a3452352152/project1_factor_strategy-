@@ -1,6 +1,15 @@
-├── data_loader.py              ← 下載台股資料（FinMind）
-├── factor_calculator.py        ← 計算動量與均值回復因子
-├── strategy_backtest.py        ← 執行選股與回測
-├── performance_metrics.py      ← 計算績效指標（CAGR, Sharpe等）
-├── main.ipynb                  ← Jupyter 筆記本整合操作
-└── README.md                   ← 專案說明（Markdown）
+# 台股雙因子選股策略
+
+## 策略說明
+- 結合「動量因子（20日漲幅）」與「均值回復因子（收盤價/5日最高價−1）」
+- 每月選出 Top 10 等權配置，無手續費
+
+## 回測設定
+- 期間：2022/01/01 ~ 2024/12/31
+- 初始資金：1,000,000
+- 再平衡頻率：每月
+
+## 使用方式
+1. 安裝套件：  
+   ```bash
+   pip install FinMind pandas numpy matplotlib jupyter
